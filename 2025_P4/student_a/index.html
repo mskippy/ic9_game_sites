@@ -1,65 +1,47 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>ICT 9 Game Websites</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 40px;
-      background: #f5f5f5;
-    }
-    h1 {
-      font-size: 32px;
-      margin-bottom: 10px;
-    }
-    h2 {
-      margin-top: 40px;
-      color: #333;
-    }
-    ul {
-      background: white;
-      padding: 20px;
-      border-radius: 8px;
-      list-style-type: none;
-      width: 300px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    li {
-      margin: 10px 0;
-    }
-    a {
-      text-decoration: none;
-      color: #0066cc;
-      font-weight: bold;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-  </style>
+  <title>My Game Website</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="main.js"></script>
 </head>
-
 <body>
-  <h1>ICT 9 Game Websites</h1>
-  <p>Select your block below to view student game websites.</p>
+  <header class="site-header">
+    <!-- Banner image at the top -->
+    <!-- Students: replace banner.png with your own image in the assets folder -->
+    <div class="banner">
+      <img src="assets/banner.png" alt="Game Banner" class="banner-image">
+    </div>
 
-  <!-- BLOCK 1 -->
-  <h2>2025 – ICT 9 Period 4</h2>
-  <ul>
-    <li><a href="2025_block1/student01/" target="_blank">Student 01</a></li>
-    <li><a href="2025_block1/student02/" target="_blank">Student 02</a></li>
-    <li><a href="2025_block1/student03/" target="_blank">Student 03</a></li>
-    <li><a href="2025_block1/student04/" target="_blank">Student 04</a></li>
-    <li><a href="2025_block1/student05/" target="_blank">Student 05</a></li>
-  </ul>
+    <h1 class="site-title">My Game Title</h1>
 
-  <!-- Add Block 2 & 3 later -->
-  <!--
-  <h2>2025 – Block 2</h2>
-  <ul>
-    <li><a href="2025_block2/student01/" target="_blank">Student 01</a></li>
-    <li><a href="2025_block2/student02/" target="_blank">Student 02</a></li>
-  </ul>
-  -->
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="game.html">Game & Trailer</a>
+    </nav>
+  </header>
+
+  <main class="content">
+    <section>
+      <h2>Welcome to My Game!</h2>
+      <p>
+        Write a short introduction to your game here. What kind of game is it?
+        Platformer? Shooter? Puzzle? What is the main goal for the player?
+      </p>
+    </section>
+
+    <section>
+      <h2>Featured Screenshot</h2>
+      <p>Replace this image with a screenshot from your game.</p>
+      <!-- Students: put a screenshot into assets/screenshot.png or change the filename below -->
+      <img src="assets/screenshot.png" alt="Game Screenshot" class="screenshot">
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Created by [Your Name] — ICT 9 Game Development</p>
+  </footer>
 </body>
 </html>

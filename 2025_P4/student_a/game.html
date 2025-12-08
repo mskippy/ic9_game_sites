@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Game & Trailer</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="main.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="banner small-banner">
+      <img src="assets/banner.png" alt="Game Banner" class="banner-image">
+    </div>
+
+    <h1 class="site-title">Game & Trailer</h1>
+
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="game.html">Game & Trailer</a>
+    </nav>
+  </header>
+
+  <main class="content">
+    <section>
+      <h2>Watch the Trailer</h2>
+      <p>Students: put your exported trailer in this folder and name it <strong>trailer.mp4</strong>, or update the file name below.</p>
+
+      <!-- Local video option (Cloudflare Pages, under 25 MB) -->
+      <video controls class="trailer-video">
+        <source src="trailer.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+
+      <!-- OR: If using YouTube later, they can comment out the <video> above and use this:
+      <div class="trailer-embed">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/VIDEO_ID"
+          title="Game Trailer"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen>
+        </iframe>
+      </div>
+      -->
+    </section>
+
+    <section>
+      <h2>Play the Game</h2>
+      <p>Students: change the link below to your actual game link.</p>
+
+      <!-- If they exported game as a web build and you host it in an online folder, link it here -->
+      <a href="https://example.com/path-to-your-game" class="play-button" target="_blank">
+        Play the Game
+      </a>
+
+      <!-- Or, if the game files are inside this folder in a subfolder called "game":
+      <a href="game/index.html" class="play-button" target="_blank">
+        Play the Game
+      </a>
+      -->
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Created by [Your Name] — ICT 9 Game Development</p>
+  </footer>
+</body>
+</html>
