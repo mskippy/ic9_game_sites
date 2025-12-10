@@ -1,0 +1,192 @@
+ /* Use pixel font */
+    body {
+      margin: 0;
+      font-family: 'Press Start 2P', monospace;
+      background: linear-gradient(#f1c06a, #dba45a, #b88042);
+      color: #1a1a1a;
+      text-align: center;
+    }
+
+    /* PIXEL BORDER AROUND WHOLE PAGE */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      border: 16px solid black;
+      outline: 8px solid #6b6b6b;
+      image-rendering: pixelated;
+      box-sizing: border-box;
+    }
+
+    /* REAL BANNER */
+    .banner {
+      width: 1920px;
+      height: 600px;
+      margin: 0 auto 40px auto;
+      border: 6px solid #000;
+      image-rendering: pixelated;
+    }
+
+    .banner img {
+      width: 1920px;
+      height: 600px;
+      display: block;
+      image-rendering: pixelated;
+    }
+
+    /* Pixel box sections */
+    .pixel-box {
+      border: 8px solid #000;
+      image-rendering: pixelated;
+      padding: 20px;
+      background: repeating-linear-gradient(
+        0deg,
+        #e0e0e0 0px,
+        #e0e0e0 4px,
+        #c8c8c8 4px,
+        #c8c8c8 8px
+      );
+      width: 80%;
+      margin: 20px auto;
+    }
+
+    h1 {
+      font-size: 3rem;
+      letter-spacing: 2px;
+      color: #1d2248;
+    }
+
+    .about {
+      font-size: 1.2rem;
+      line-height: 1.7;
+      color: #222;
+      max-width: 900px;
+      margin: 40px auto;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      margin-top: 60px;
+      text-decoration: underline;
+      text-underline-offset: 8px;
+    }
+
+    /* Feature grid */
+    .features {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 25px;
+      margin-top: 30px;
+    }
+
+    .feature {
+      width: 260px;
+      padding: 20px;
+      background: #cfd6e5;
+      border: 4px solid #000;
+      image-rendering: pixelated;
+      font-size: 1.1rem;
+    }
+
+    /* Long text sections */
+    .long-section {
+      width: 85%;
+      margin: 60px auto;
+      padding: 30px;
+      background: repeating-linear-gradient(
+        0deg,
+        #dcdcdc 0px,
+        #dcdcdc 4px,
+        #bdbdbd 4px,
+        #bdbdbd 8px
+      );
+      border: 8px solid #000;
+      image-rendering: pixelated;
+      text-align: left;
+      font-size: 1.15rem;
+      line-height: 1.8;
+    }
+
+    /* Pixel framed content */
+    .pixel-frame {
+      border: 8px solid #000;
+      outline: 6px solid #5a5a5a;
+      padding: 20px;
+      margin: 40px auto;
+      width: 85%;
+      image-rendering: pixelated;
+      background: #dcdcdc;
+    } 
+   /* POSTER PAGE UNIQUE BACKGROUND */
+.poster-page {
+  background: linear-gradient(#d6e6ff, #b1c8ff, #8aa7f8);
+}
+
+/* POSTER PAGE TITLE */
+.page-title {
+  font-size: 2.2rem;
+  margin-top: 40px;
+  text-decoration: underline;
+}
+
+/* POSTER IMAGE FRAME */
+.poster-wrapper {
+  width: 90%;
+  max-width: 900px;
+  margin: 40px auto;
+  border: 8px solid black;
+  outline: 6px solid #6b6b6b;
+  image-rendering: pixelated;
+  background: #e0e0e0;
+  padding: 20px;
+}
+
+/* POSTER IMAGE */
+.poster-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+  image-rendering: pixelated;
+}
+
+/* LINK BUTTONS */
+.nav-link {
+  display: inline-block;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: black;
+  background: #cfd6e5;
+  padding: 12px 20px;
+  border: 4px solid #000;
+  margin-top: 20px;
+  image-rendering: pixelated;
+}
+.nav-link:hover {
+  background: #b8c0d4;
+}
+/* TRAILER PAGE VIDEO SIZE */
+.video-wrapper {
+  width: 90%;
+  max-width: 900px;   /* bigger display */
+  margin: 40px auto;
+  border: 8px solid black;
+  outline: 6px solid #6b6b6b;
+  padding: 20px;
+  background: #e0e0e0;
+  image-rendering: pixelated;
+}
+
+.video-wrapper video {
+  width: 100%;        /* fills the wrapper */
+  height: auto;
+  display: block;
+}
+
+
+
+ 
