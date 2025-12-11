@@ -1,0 +1,178 @@
+/* Frog Hop Style Guide Colours */
+:root {
+    --green-dark: #0d3d25;
+    --green-mid: #315c2e;
+    --green-light: #408c3b;
+    --green-bright: #89c93a;
+    --yellow-coin: #ffd706;
+    --yellow-alt: #f2b625;
+    --black: #000;
+    --white: #ffffff;
+}
+
+/* General Body */
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    background: #e3f4ff;
+    color: var(--black);
+}
+
+
+/* Hyperlink colours */
+a:link {
+    color: var(--green-mid);
+}
+
+/* visited link */
+a:visited {
+  color: var(--green-mid);
+}
+
+
+/* Top Banner */
+.top-banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+    max-height: 600px; /* Your banner height */
+    object-fit: cover;
+}
+
+/* Layout container */
+.layout {
+    display: flex;
+    min-height: calc(100vh - 600px); /* subtract banner height */
+}
+
+
+    /* Sidebar navigation */
+.sidebar {
+    width: 180px;
+    background: var(--white);          /* Changed to white */
+    color: var(--black);
+    padding: 20px;
+    border-right: 6px solid var(--green-dark);   /* Added green border */
+}
+
+.nav-title {
+    font-family: 'Press Start 2P';
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: var(--green-dark);        /* Title in dark green */
+}
+
+.sidebar ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.sidebar li {
+    margin-bottom: 15px;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: var(--green-mid);         /* Links now green instead of yellow */
+    font-size: 16px;
+    transition: 0.2s;
+    font-weight: 600;
+}
+
+.sidebar a:hover {
+    color: var(--green-bright);      /* Hover highlight */
+}
+
+
+
+.nav-title {
+    font-family: 'Press Start 2P';
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.sidebar li {
+    margin-bottom: 15px;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: var(--yellow-coin);
+    font-size: 16px;
+    transition: 0.2s;
+}
+
+.sidebar a:hover {
+    color: var(--yellow-alt);
+}
+
+/* Main content area */
+.content {
+    flex: 1;
+    padding: 30px;
+    background: #f8fff8;
+}
+
+/* Section box templates */
+.section-box {
+    background: var(--white);
+    border-left: 6px solid var(--green-light);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+.section-box h2 {
+    font-family: 'Press Start 2P';
+    margin-top: 0;
+}
+
+.section-box p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+
+.video-section {
+    margin: 20px 0;
+}
+
+.video-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    
+}
+
+.video-placeholder {
+    width: 90%;
+    max-width: 320px;
+    aspect-ratio: 16 / 9;
+    background: #ddd;
+    border: 3px dashed var(--green-bright);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+   
+}
+.banner-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+.banner-image {
+    width: 100%;
+    height: auto;
+}
+
+
+
+

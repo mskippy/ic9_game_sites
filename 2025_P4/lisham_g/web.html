@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Exotic Eyes — Pixel Launch Page (Redesign)</title>
+  <style>
+    /* Pixel-first global styles */
+    @font-face{font-family:Pixel; src:url('pixel-font.ttf');}
+    :root{--bg:#070707; --accent:#ff3b3b; --panel:#0f0f0f;}
+    *{box-sizing:border-box}
+    html,body{height:100%; margin:0; font-family:Pixel, monospace; background:var(--bg); color:#eee; image-rendering:pixelated}
+
+    /* Container and pixel frame */
+    .wrap{max-width:1100px; margin:20px auto; padding:18px}
+    .pixel-frame{border:10px solid var(--accent); box-shadow:0 0 0 4px #4f1414; padding:12px; border-radius:4px}
+
+    /* Header */
+    header{display:flex; align-items:center; gap:16px; flex-direction:column}
+    header img{width:100%; display:block; image-rendering:pixelated}
+
+    /* Top controls */
+    .top-row{width:100%; display:flex; justify-content:space-between; align-items:center}
+    .logo{font-size:36px; color:var(--accent); letter-spacing:2px}
+    nav a{color:var(--accent); margin:0 8px; text-decoration:none; font-size:18px}
+
+    /* Hero */
+    .hero{display:grid; grid-template-columns:1fr 420px; gap:18px; margin-top:12px}
+    .hero .panel{background:var(--panel); padding:12px}
+    .cta{display:flex; gap:10px; margin-top:12px}
+    .btn{background:var(--accent); padding:10px 16px; color:#111; text-decoration:none; font-weight:bold; border:4px solid #6b0f0f}
+
+    /* Video */
+    .video-wrap{border:8px solid var(--accent); overflow:hidden}
+    video{width:100%; height:100%; display:block; image-rendering:pixelated}
+
+    /* Sections */
+    section{margin-top:22px}
+    .grid{display:grid; grid-template-columns:repeat(3,1fr); gap:12px}
+    .card{background:#111; padding:12px; border:6px solid var(--accent)}
+
+    /* Gallery placeholders */
+    .screenshot{background:#222; height:140px; display:flex; align-items:center; justify-content:center; font-size:18px}
+
+    /* Footer */
+    footer{margin-top:24px; text-align:center; color:#888}
+
+    /* Responsive */
+    @media (max-width:900px){ .hero{grid-template-columns:1fr; } .grid{grid-template-columns:repeat(2,1fr);} }
+    @media (max-width:520px){ .grid{grid-template-columns:1fr;} .logo{font-size:28px} }
+  </style>
+</head>
+<body>
+  <div class="wrap pixel-frame">
+    <header>
+      <!-- Banner image placeholder - replace with web banner file -->
+      <img src="Where shadows rise and towers reign.png" alt="Exotic Eyes Banner" />
+
+      <div class="top-row" style="width:100%;">
+        <div class="logo">EXOTIC EYES</div>
+        <nav>
+          <a href="#about">ABOUT</a>
+          <a href="#features">FEATURES</a>
+          <a href="#gallery">GALLERY</a>
+          <a href="#contact">CONTACT</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="hero">
+        <div class="panel">
+          <h1 style="color:var(--accent); font-size:32px; margin:6px 0">A Pixel Knight. A Cursed Castle. Exotic Powers.</h1>
+          <p>Exotic Eyes is a retro pixel-action adventure where you explore ruined keeps, face grotesque foes, and collect powerful eye artifacts that change your abilities and the world around you.</p>
+          <div class="cta">
+            <a class="btn" href="#download">Download Demo</a>
+            <a class="btn" href="#gallery">See Screenshots</a>
+          </div>
+
+          <section id="features">
+            <h2 style="color:var(--accent)">Core Features</h2>
+            <div class="grid">
+              <div class="card">⚔️ Tight Knight Combat</div>
+              <div class="card">🏰 Procedural Castle Rooms</div>
+              <div class="card">🧿 Transformative Exotic Eyes</div>
+              <div class="card">👑 Massive Boss Encounters</div>
+              <div class="card">🎵 Dark Pixel Soundtrack</div>
+              <div class="card">⏱ Speedrun & Challenge Modes</div>
+            </div>
+          </section>
+
+        </div>
+
+        <aside class="video-wrap">
+          <!-- Replace with uploaded mp4 file name to play locally -->
+          <video controls>
+            <source src="Screen Recording 2025-12-08 141041.mp4" type="video/mp4" />
+            Your browser does not support video.
+          </video>
+        </aside>
+      </div>
+
+      <section id="about">
+        <h2 style="color:var(--accent)">About the World</h2>
+        <p style="background:#0b0b0b; padding:12px; border:6px solid var(--accent)">Unearth the tangled history of a kingdom consumed by a ritual gone wrong. The Exotic Eyes appear as both salvation and curse—each one rewrites what you can see and how you fight.</p>
+      </section>
+
+      <section id="gallery">
+        <h2 style="color:var(--accent)">Gallery</h2>
+        <div class="grid">
+          <div class="card"><div class="screenshot">Screenshot 1</div></div>
+          <div class="card"><div class="screenshot">Screenshot 2</div></div>
+          <div class="card"><div class="screenshot">Screenshot 3</div></div>
+          <div class="card"><div class="screenshot">Screenshot 4</div></div>
+          <div class="card"><div class="screenshot">Screenshot 5</div></div>
+          <div class="card"><div class="screenshot">Screenshot 6</div></div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h2 style="color:var(--accent)">Contact & Support</h2>
+        <p>Want to share feedback, report a bug, or join the community? Drop a message below.</p>
+        <form action="#" style="display:flex; flex-direction:column; gap:8px; max-width:600px">
+          <input type="text" placeholder="Your name" style="padding:10px; border:6px solid #3a0f0f; background:#0b0b0b; color:#eee" />
+          <input type="email" placeholder="Email" style="padding:10px; border:6px solid #3a0f0f; background:#0b0b0b; color:#eee" />
+          <textarea placeholder="Message" style="padding:10px; border:6px solid #3a0f0f; background:#0b0b0b; color:#eee; min-height:120px"></textarea>
+          <button class="btn" type="submit" style="width:160px">Send</button>
+        </form>
+      </section>
+
+      <section id="download" style="margin-top:18px">
+        <h2 style="color:var(--accent)">Download</h2>
+        <p>Click the button to download the demo build (zip).</p>
+        <a class="btn" href="exotic-eyes-demo.zip">Download Demo (ZIP)</a>
+      </section>
+
+    </main>
+
+    <footer>
+      © 2025 Exotic Eyes — Pixel Art Dark Fantasy Game
+    </footer>
+  </div>
+</body>
+</html>

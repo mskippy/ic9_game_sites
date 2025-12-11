@@ -1,0 +1,262 @@
+
+
+/* ===== BASIC RESET ===== */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+ 
+
+ 
+/* ===== NAVIGATION BAR ===== */
+
+nav {
+
+    background-color: #1c2733;
+
+    padding: 12px 0;
+
+    margin-bottom: 30px;
+
+}
+ 
+nav ul {
+
+    list-style: none;
+
+    display: flex;                 /* put items in a row */
+
+    justify-content: center;       /* center the menu horizontally */
+
+    gap: 30px;                     /* spacing between links */
+
+}
+ 
+nav a {
+
+    color: #00d9ff;
+
+    text-decoration: none;
+
+    font-size: 18px;
+
+    padding: 6px 10px;
+
+    transition: 0.2s;
+
+}
+ 
+nav a:hover {
+
+    color: #ffffff;
+
+    background-color: #00d9ff;
+
+    border-radius: 6px;
+
+}
+ 
+/* ===== MAIN CONTENT ===== */
+
+main {
+
+    max-width: 900px;              /* limit width */
+
+    margin: 0 auto;                /* center on the page */
+
+    padding: 20px;
+
+    background-color: #1a1f27;
+
+    border-radius: 10px;
+
+}
+ 
+/* ===== SECTIONS ===== */
+
+section {
+
+    margin-bottom: 40px;           /* spacing between sections */
+
+}
+ 
+/* ===== HEADINGS ===== */
+
+ h1,h2, h3 {
+
+    color: #00d9ff;
+
+    margin-bottom: 15px;
+
+}
+ 
+/* ===== RESPONSIVE IMAGES ===== */
+
+img {
+
+    width: 100%;
+
+    
+}
+/* ===== BASIC RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+/* ===== PAGE ===== */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;   /* white background */
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+ 
+/* ===== NAVIGATION BAR ===== */
+nav {
+    background-color: #ff6ea1;   /* pink bar */
+    padding: 12px 0;
+    margin-bottom: 30px;
+}
+ 
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+ 
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 6px 10px;
+    transition: 0.2s;
+}
+ 
+nav a:hover {
+    background-color: #ff99bd;
+    border-radius: 6px;
+}
+ 
+/* ===== MAIN CONTENT ===== */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffe0ec;   /* light pink content box */
+    border-radius: 10px;
+}
+ 
+/* ===== HEADINGS ===== */
+h1, h2, h3 {
+    text-align: center;          /* center the titles */
+    color: #f5719b;
+    margin-bottom: 15px;
+}
+ 
+/* ===== SECTIONS ===== */
+section {
+    margin-bottom: 40px;
+}
+ 
+/* ===== RESPONSIVE IMAGES ===== */
+img {
+    width: 90%;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 8px;
+}
+ 
+/* ===== GALLERY IMAGES ===== */
+.gallery img {
+    width: 100px;                /* smaller, consistent size */
+    height: auto;
+    border: 3px solid #cc3263;   /* pink border */
+    border-radius: 10px;
+    margin: 10px;
+}
+ 
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+ 
+/* ===== FOOTER ===== */
+footer {
+    text-align: center;
+    margin-top: 50px;
+    color: #777;
+    font-size: 14px;
+}
+.img-container {
+  text-align: center;
+}
+
+.img-container img {
+  width: 100%; /* optional */
+}
+
+
+.small-img {
+  width: 100px;  
+  
+}
+
+.pics {
+    width: 700px;
+    
+}
+
+body {
+  background-color: lightblue; /* change to any color */
+}
+
+.pink-border {
+  border: 10x solid rgb(253, 108, 168); /* change thickness if you want */
+  border-radius: 10px; /* optional: makes corners rounded */
+  width: 400px;
+  
+}
+img {
+    display: block;
+    margin: 0 auto;   /* centers the image */
+}
+h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+p{
+    text-align: center;
+    color: #2774bd;
+}
+.text-box {
+    border: 3px solid pink;   /* border color + thickness */
+    padding: 10px;            /* space inside the box */
+    display: inline-block;    /* keeps the box tight around text */
+    border-radius: 6px;       /* optional: rounded corners */
+   margin: 0 auto;        /* centers it */
+}
+
+.center {
+    text-align: center;    /* centers the element inside a container */
+}
+.text-box {
+    border: 3px solid #ff7bbf;
+    background-color: #ffd3eb;  /* lighter fill */
+    padding: 10px 20px;
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    border-radius: 10px;
+    color: #ff2a88;
+}
