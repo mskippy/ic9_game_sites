@@ -1,0 +1,181 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+    --title-colour: #ffa100;
+    --bg-light: #a8f8e3;
+    --bg-dark: #6ac7b5;
+    --text-dark: #155a53;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: var(--bg-light);
+    color: var(--text-dark);
+}
+
+/* Navigation */
+nav {
+    background: var(--bg-dark);
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 600;
+}
+
+/* Hero */
+.hero {
+    text-align: center;
+    padding: 20px;
+}
+
+.hero-banner {
+    width: 1000%;
+    max-width: 1500px;
+    border-radius: 6px;
+    box-shadow: 0 0 10px #000;
+}
+ 
+
+
+.hero h1 {
+    font-family: 'Caveat Brush', cursive;
+    font-size: 5rem;
+    color: var(--title-colour);
+    margin-top: 10px;
+}
+
+.hero p {
+    font-size: 1.6rem;
+    color: #2a7f56;
+}
+
+/* Sections */
+section {
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-family: 'Caveat Brush', cursive;
+    color: var(--title-colour);
+    font-size: 4rem
+}
+
+.trailer-section {
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: 40px auto;
+     box-shadow: 0 0 10px #000;
+}
+/* Gallery grid */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* always 3 per row */
+    gap: 20px;
+    margin-top: 20px;
+}
+
+
+.gallery-grid img {
+    width: 100%;
+    border-radius: 15px;
+    border: 3px solid var(--title-colour);
+}
+.main-character {
+    padding: 50px;
+}
+
+
+.main-character-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+/* Reddy image */
+.reddy-img {
+    width: 200px;
+    border: 4px solid #ffb53a;
+    border-radius: 20px;
+    padding: 10px;
+    background: #ffffff00;
+}
+
+/* Reddy story text */
+.story p {
+    max-width: 400px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6rem;
+    color: #2a7f56;
+}
+
+.poster {
+    padding: 50px;
+}
+
+
+.poster-content {
+    display: flex;
+    justify-content: center;
+}
+
+.poster-img {
+    width: 80%;
+    max-width: 600px;
+    border: 4px solid #ffb53a;
+    border-radius: 20px;
+    background: #ffffff00;
+    padding: 10px;
+}
+h2 {
+    font-family: 'Caveat Brush', cursive;
+    color: var(--title-colour);
+    font-size: 3rem;
+    text-align: left;
+    margin-bottom: 20px;
+}
+.trailer-video {
+    width: 100%;
+    max-width: 800px; /* adjust if you want */
+    border: 4px solid var(--title-colour); 
+    border-radius: 20px;
+    padding: 10px;
+    background: #ffffff00; 
+    display: block;
+    margin: 0 auto; 
+}
+/* How to play lists */
+.instruction-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 20px;
+}
+
+.instruction-list li {
+    background: rgba(255, 255, 255, 0);
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    border-radius: 12px;
+    border: 2px solid var(--title-colour);
+    color: var(--text-dark);
+}
+
