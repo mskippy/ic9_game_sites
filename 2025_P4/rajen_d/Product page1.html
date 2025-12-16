@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Product Details</title>
+    <style>
+        body { font-family: Arial; padding: 20px; }
+        .product-box { max-width: 600px; margin: auto; text-align: center; }
+        img { width: 100%; max-width: 400px; border-radius: 8px; }
+        .sizes { margin-top: 20px; }
+        .sizes span {
+            display: inline-block;
+            padding: 8px 14px;
+            margin: 4px;
+            background: #e3e3e3;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="product-box" id="product"></div>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const product = JSON.parse(params.get("data"));
+
+document.getElementById("product").innerHTML = `
+    <h1>${product.title}</h1>
+    <img src="${product.image}">
+    <p>${product.desc}</p>
+    <h2>${product.price}</h2>
+
+    <h3>Available Sizes</h3>
+    <div class="sizes">
+        ${product.sizes.map(size => `<span>${size}</span>`).join("")}
+    </div>
+`;
+</script>
+
+</body>
+</html>
