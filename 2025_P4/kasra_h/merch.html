@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merch — Beneath The Quiet</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="Characters.html">Characters</a>
+    <a href="gameplay.html">How to Play</a>
+    <a href="credits.html">Credits</a>
+    <a href="images/game.zip" download>Download</a>
+    <a href="merch.html">Merch</a>
+    <!-- CART BUTTON (top-right) -->
+<button id="openCartBtn" class="cart-toggle" title="Open cart">
+    🛒 <span id="cartBadge" class="cart-badge">0</span>
+</button>
+
+
+</nav>
+<div class="merch-search">
+  <input
+    type="text"
+    id="merchSearch"
+    placeholder="Search merch..."
+    aria-label="Search merch"
+  />
+</div>
+
+
+
+</body>
+</html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Merch — Beneath The Quiet</title>
+  <style>
+    /* Simple bundled styles for merch + cart */
+    :root {
+      --bone:#C0AEA3;
+      --dark:#0b0b0b;
+      --panel:#111;
+      --white:#ffffff;
+    }
+    body { margin:0; font-family: "Cinzel", serif; background:var(--dark); color:var(--bone); }
+    header { padding:18px 28px; display:flex; align-items:center; gap:20px; background:#000; border-bottom:3px solid var(--white);}
+    header a{ color:var(--white); text-decoration:none; margin-right:12px; font-family:"Cinzel Decorative"; }
+    .container{ max-width:1100px; margin:28px auto; padding:0 20px; }
+    .top-row{ display:flex; justify-content:space-between; align-items:center; gap:12px; margin-bottom:18px; }
+    .search { padding:10px 14px; width:360px; background:#111; border:2px solid #000; color:var(--bone); border-radius:6px; }
+    .merch-grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:20px; }
+    .card{ background:var(--panel); padding:14px; border:3px solid #000; outline:3px solid var(--white); border-radius:8px; text-align:center; }
+    .card img{ width:100%; height:200px; object-fit:contain; border-bottom:1px solid rgba(255,255,255,0.03); margin-bottom:10px; }
+    .card h3{ margin:6px 0; font-size:1.05rem; color:var(--bone); }
+    .price{ font-weight:700; color:var(--white); margin-bottom:8px; }
+    .card .btn{ display:inline-block; padding:8px 12px; background:#222; color:var(--white); text-decoration:none; border:2px solid #000; outline:2px solid var(--white); border-radius:6px; cursor:pointer; margin:6px 4px; }
+    .card .btn.secondary{ background:transparent; border:2px dashed rgba(255,255,255,0.08); }
+    /* floating cart */
+    .cart-toggle{ position:fixed; top:18px; right:18px; background:transparent; border:none; cursor:pointer; z-index:9999; }
+    .cart-badge{ display:inline-block; min-width:20px; padding:2px 6px; background:var(--white); color:#000; border-radius:14px; font-weight:700; margin-left:6px; }
+    .cart-panel{ position:fixed; top:70px; right:18px; width:360px; max-height:70vh; overflow:auto; background:var(--panel); border:3px solid #000; outline:3px solid var(--white); padding:12px; border-radius:8px; box-shadow:12px 12px 0 rgba(0,0,0,0.8); display:none; z-index:9998; }
+    .cart-item{ display:flex; gap:10px; align-items:center; border-bottom:1px solid rgba(255,255,255,0.02); padding:10px 0; }
+    .cart-item img{ width:56px; height:56px; object-fit:contain; }
+    .qty { display:flex; gap:6px; align-items:center; }
+    .qty button{ padding:4px 8px; cursor:pointer; }
+    .cart-footer{ margin-top:12px; display:flex; justify-content:space-between; align-items:center; gap:8px; }
+    .checkout, .remove { padding:8px 10px; border-radius:6px; cursor:pointer; border:2px solid #000; outline:2px solid var(--white); background:#222; color:var(--white); }
+    .empty { color:#999; text-align:center; padding:20px 0; }
+    /* product link style */
+    .view-link{ display:block; margin-top:8px; color:var(--bone); text-decoration:none; font-size:0.95rem; }
+    /* responsive */
+    @media (max-width:700px){ .container{ padding:10px } .cart-panel{ width:92vw; right:4vw; } }
+  </style>
+</head>
+<body>
+
+  <header>
+   
+    <div style="margin-left:auto; display:flex; gap:10px; align-items:center;">
+      <input id="searchBox" class="search" placeholder="Search merch (e.g. shirt, mug, poster)">
+      <button id="openCartBtn" class="cart-toggle" title="Open cart">
+        🛒 <span id="cartBadge" class="cart-badge">0</span>
+      </button>
+    </div>
+  </header>
+
+  <div class="container">
+    <h1 style="font-family:'Cinzel Decorative'; font-size:2.2rem; color: #C0AEA3; margin-bottom:12px;">Official Merch</h1>
+
+    <div id="grid" class="merch-grid"></div>
+  </div>
+
+  <!-- cart panel -->
+  <div id="cartPanel" class="cart-panel" aria-hidden="true">
+    <h3 style="margin:0 0 8px 0; font-family:'Cinzel Decorative'">Cart</h3>
+    <div id="cartItems"></div>
+    <div id="cartEmpty" class="empty">Your cart is empty</div>
+    <div class="cart-footer" style="display:none;">
+      <div><strong>Subtotal:</strong> $<span id="cartSubtotal">0.00</span></div>
+      <div style="display:flex; gap:8px;">
+        <button id="checkoutBtn" class="checkout">Checkout</button>
+        <button id="clearBtn" class="remove">Clear</button>
+      </div>
+    </div>
+  </div>
+
+<script>
+/* MERCH + CART system script (single-file) */
+
+/* PRODUCTS (edit image file names if needed) */
+const products = [
+  { id: 'bb1', title: 'Black Butterfly Shirt', price:35, img:'images/blackteebutterfly.svg', sizes:['S','M','L','XL'], type:'apparel' },
+  { id: 'wb1', title: 'White Butterfly Shirt', price:35, img:'images/whitebutterflytee.svg', sizes:['S','M','L','XL'], type:'apparel' },
+  { id: 'wc1', title: 'White Silent Knight Shirt', price:35, img:'images/whitethesilentknight.svg', sizes:['S','M','L','XL'], type:'apparel' },
+  { id: 'lb1', title: 'Black Loud Boss Shirt', price:35, img:'images/blackteeloudboss.svg', sizes:['S','M','L','XL'], type:'apparel' },
+  { id: 'stick1', title: 'Sticker Sheet', price:7, img:'images/stickersheeet.svg', sizes:[], type:'merch' },
+  { id: 'post1', title: 'Poster', price:10, img:'images/poster.svg', sizes:[], type:'merch' },
+  { id: 'mug1', title: 'Official Mug', price:20, img:'images/mug.svg', sizes:[], type:'merch' },
+  { id: 'pants1', title: 'Black Sweat Pants', price:45, img:'images/black sweat pants.svg', sizes:['S','M','L','XL'], type:'apparel' }
+];
+
+/* CART stored in localStorage under key 'btq_cart' */
+function loadCart(){ try { return JSON.parse(localStorage.getItem('btq_cart'))||[] } catch(e){ return [] } }
+function saveCart(c){ localStorage.setItem('btq_cart', JSON.stringify(c)); updateCartUI(); }
+
+/* render product grid */
+const grid = document.getElementById('grid');
+function renderGrid(list){
+  grid.innerHTML = '';
+  list.forEach(p=>{
+    const card = document.createElement('div'); card.className='card';
+    card.innerHTML = `
+      <img src="${p.img}" alt="${p.title}">
+      <h3>${p.title}</h3>
+      <div class="price">$${p.price}</div>
+      <button class="btn" data-add="${p.id}">Add to cart</button>
+      <a class="view-link" href="product.html?id=${p.id}" target="_blank">View / Choose size</a>
+    `;
+    grid.appendChild(card);
+  });
+  // add event listeners to add buttons
+  document.querySelectorAll('[data-add]').forEach(btn=>{
+    btn.addEventListener('click', (e)=>{
+      const id = e.currentTarget.getAttribute('data-add');
+      const prod = products.find(x=>x.id===id);
+      // if product has sizes, default to M; user can choose on product page
+      const size = prod.sizes && prod.sizes.length? 'M' : 'One size';
+      addToCart(id, size, 1);
+    });
+  });
+}
+
+/* search filter */
+const searchBox = document.getElementById('searchBox');
+searchBox.addEventListener('input', ()=> {
+  const q = searchBox.value.trim().toLowerCase();
+  const filtered = products.filter(p => p.title.toLowerCase().includes(q));
+  renderGrid(filtered);
+});
+
+/* CART functions */
+function addToCart(productId, size='One size', qty=1){
+  const cart = loadCart();
+  const existing = cart.find(i=>i.id===productId && i.size===size);
+  if(existing){ existing.qty += qty; }
+  else{ cart.push({ id: productId, size: size, qty: qty }); }
+  saveCart(cart);
+  openCartPanel();
+}
+
+function updateCartUI(){
+  const cart = loadCart();
+  const badge = document.getElementById('cartBadge');
+  const itemsWrap = document.getElementById('cartItems');
+  const empty = document.getElementById('cartEmpty');
+  const footer = document.querySelector('.cart-footer');
+  badge.textContent = cart.reduce((s,i)=>s+i.qty,0);
+  itemsWrap.innerHTML = '';
+  if(cart.length===0){ empty.style.display='block'; footer.style.display='none'; return; }
+  empty.style.display='none'; footer.style.display='flex';
+  let subtotal = 0;
+  cart.forEach((it, idx)=>{
+    const prod = products.find(p=>p.id===it.id);
+    const row = document.createElement('div'); row.className='cart-item';
+    row.innerHTML = `
+      <img src="${prod.img}" alt="${prod.title}">
+      <div style="flex:1">
+        <div style="font-weight:700;color:var(--white)">${prod.title}</div>
+        <div style="font-size:0.9rem;color:#ccc">Size: ${it.size}</div>
+        <div style="margin-top:6px;" class="qty">
+          <button data-decr="${idx}">-</button>
+          <span style="padding:4px 8px;display:inline-block">${it.qty}</span>
+          <button data-incr="${idx}">+</button>
+          <button data-remove="${idx}" style="margin-left:8px;color:#f88;background:transparent;border:none;cursor:pointer">Remove</button>
+        </div>
+      </div>
+      <div style="font-weight:700">$${(prod.price*it.qty).toFixed(2)}</div>
+    `;
+    itemsWrap.appendChild(row);
+  subtotal += prod.price * it.qty;
+  });
+  document.getElementById('cartSubtotal').textContent = subtotal.toFixed(2);
+
+  // attach listeners
+  document.querySelectorAll('[data-incr]').forEach(b=>b.addEventListener('click', e=>{
+    const i = +e.currentTarget.getAttribute('data-incr');
+    const c = loadCart(); c[i].qty++; saveCart(c);
+  }));
+  document.querySelectorAll('[data-decr]').forEach(b=>b.addEventListener('click', e=>{
+    const i = +e.currentTarget.getAttribute('data-decr');
+    const c = loadCart(); c[i].qty = Math.max(1, c[i].qty-1); saveCart(c);
+  }));
+  document.querySelectorAll('[data-remove]').forEach(b=>b.addEventListener('click', e=>{
+    const i = +e.currentTarget.getAttribute('data-remove');
+    const c = loadCart(); c.splice(i,1); saveCart(c);
+  }));
+}
+
+/* open / close cart panel */
+const openCartBtn = document.getElementById('openCartBtn');
+const cartPanel = document.getElementById('cartPanel');
+openCartBtn.addEventListener('click', ()=> {
+  const visible = cartPanel.style.display === 'block';
+  if(visible) cartPanel.style.display = 'none';
+  else { updateCartUI(); cartPanel.style.display = 'block'; cartPanel.setAttribute('aria-hidden','false'); }
+});
+
+/* helpers */
+function openCartPanel(){ updateCartUI(); cartPanel.style.display = 'block'; cartPanel.setAttribute('aria-hidden','false'); }
+document.getElementById('checkoutBtn').addEventListener('click', ()=>{
+  const cart = loadCart();
+  if(cart.length===0){ alert('Your cart is empty'); return; }
+  // simulate checkout
+  alert('Thank you! Checkout simulated — order placed. (This is a demo.)');
+  localStorage.removeItem('btq_cart'); updateCartUI(); cartPanel.style.display='none';
+});
+document.getElementById('clearBtn').addEventListener('click', ()=>{ if(confirm('Clear cart?')){ localStorage.removeItem('btq_cart'); updateCartUI(); } });
+
+/* init render */
+renderGrid(products);
+updateCartUI();
+</script>
+</body>
+</html>
+<script>
+  const searchInput = document.getElementById("merchSearch");
+  const items = document.querySelectorAll(".merch-item");
+
+  searchInput.addEventListener("input", () => {
+    const query = searchInput.value.toLowerCase();
+
+    items.forEach(item => {
+      const name = item.dataset.name.toLowerCase();
+      item.style.display = name.includes(query) ? "block" : "none";
+    });
+  });
+</script>

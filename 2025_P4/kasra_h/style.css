@@ -1,0 +1,285 @@
+/* ===== FONTS ===== */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&display=swap');
+
+/* If you download Trajan font, put it in your folder and uncomment:
+@font-face {
+    font-family: 'Trajan';
+    src: url('Trajan.ttf');
+}
+*/
+
+/* ===== COLOR PALETTE (STYLE GUIDE) ===== */
+:root {
+    --black: #000000;
+    --darkblue: #070F1F;
+    --red: #75120F;
+    --bone: #C0AEA3;
+    --grey: #444241;
+    --white: #ffffff;
+}
+
+/* ===== GLOBAL ===== */
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--black);
+    color: var(--bone);
+    font-family: "Cinzel", serif;
+    background-color: var(--darkblue);
+    background-image: url("images/Untitled (Youtube Banner).svg"); /* soft grunge texture */
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* ===== NAVIGATION ===== */
+nav {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    background: rgba(0,0,0,0.8);
+    border-bottom: 3px solid var(--bone);
+    backdrop-filter: blur(5px);
+}
+
+nav a {
+    font-family: "Cinzel Decorative";
+    color: var(--bone);
+    text-decoration: none;
+    margin: 0 25px;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--white);
+    text-shadow: 0 0 10px var(--white);
+}
+
+/* ===== HEADER / BANNER ===== */
+.header-banner {
+    background: url("Untitled (Youtube Banner).png") no-repeat center/cover;
+    height: 450px;
+    position: relative;
+    width: 100%;
+}
+
+
+header h1 {
+    font-family: "Cinzel Decorative";
+    font-size: 4.5rem;
+    color: var(--black);
+    letter-spacing: 4px;
+    text-shadow: 2px 2px var(--bone);
+}
+
+header p {
+    font-size: 1.4rem;
+    margin-top: 10px;
+    color: var(--black);
+    text-shadow: 1px 1px var(--bone);
+}
+
+/* ===== CONTENT SECTIONS ===== */
+.content {
+    max-width: 1050px;
+    margin: auto;
+    padding: 40px 25px;
+}
+
+.panel {
+    background: rgba(17,17,17,0.85);
+    padding: 35px;
+    border-left: 4px solid var(--white); /* accent uses red from style guide */
+    border-radius: 4px;
+    margin-bottom: 40px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.6);
+}
+
+h2 {
+    font-family: "Cinzel Decorative";
+    font-size: 2.6rem;
+    margin-top: 0;
+    color: var(--bone);
+}
+
+h3 {
+    font-family: "Cinzel Decorative";
+    margin-top: 25px;
+}
+
+/* ===== GALLERY ===== */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.gallery-img {
+    width: 100%;
+    border: 3px solid var(--black);
+    outline: 3px solid var(--bone);
+    border-radius: 4px;
+    background: var(--grey);
+    box-shadow: 0 0 15px rgba(0,0,0,0.7);
+}
+
+/* Trailer Section */
+.trailer-section {
+    background: rgba(0, 0, 0, 0.35);
+    padding: 60px 40px;
+    margin: 60px auto;
+    border: 1px solid #C0AEA3;
+    border-radius: 6px;
+    width: 75%;
+}
+
+.trailer-section h2 {
+    text-align: center;
+    font-size: 2.6rem;
+    color: #C0AEA3;
+    margin-bottom: 25px;
+}
+
+.trailer-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.trailer-wrapper video {
+    width: 90%;
+    max-width: 900px;
+    border: 2px solid #C0AEA3;
+    border-radius: 6px;
+}
+
+
+
+/* ===== CREDITS PAGE ===== */
+.credits p {
+    font-size: 1.2rem;
+}
+
+/* ===== LINKS ===== */
+a {
+    color: var(--bone);
+}
+
+a:hover {
+    color: var(--white);
+}
+
+.character-box {
+    width: 300px;
+    margin: 10px auto;
+    padding: 10px;
+    background: #111;
+    color: #fff;
+    border: 1px solid #444;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+}
+
+.character-desc {
+    width: 260px;
+    margin: 8px auto;
+    padding: 8px;
+    background: #222;
+    color: #ddd;
+    border: 1px solid #555;
+    border-radius: 6px;
+    font-size: 0.85rem;
+}
+body {
+    padding-top: 450px;
+}
+/* Make navbar on top */
+nav {
+    position: relative;
+    z-index: 9999 !important;
+}
+
+/* Move overview panel down */
+.panel:first-of-type {
+    margin-top: 120px !important;
+}
+nav {
+    background: #000;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 3px solid #C0AEA3;
+    position: fixed;
+    z-index: 9999;
+
+}
+
+.header-banner {
+    position: relative; /* stops overlapping */
+}
+body {
+    padding-top: 1px; /* ONLY for the nav bar height */
+}
+.merch-title {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 40px;
+    color: #C0AEA3;
+}
+
+.merch-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+}
+
+.merch-item {
+    text-align: center;
+    background: rgba(0,0,0,0.6);
+    padding: 20px;
+    border: 2px solid #C0AEA3;
+    border-radius: 8px;
+}
+
+.merch-item img {
+    width: 100%;
+    max-width: 240px;
+    margin-bottom: 15px;
+    border: 2px solid #C0AEA3;
+}
+
+.price {
+    font-size: 1.4rem;
+    color: #C0AEA3;
+    font-weight: bold;
+}
+.credits a {
+    color: var(--bone);
+    text-decoration: none;
+    border-bottom: 1px solid var(--bone);
+    padding-bottom: 3px;
+    font-family: "Cinzel", serif;
+}
+
+.credits a:hover {
+    color: var(--white);
+    text-shadow: 0 0 6px var(--white);
+}
+.merch-search {
+  text-align: right;
+  margin: 20px 0;
+}
+
+.merch-search input {
+  padding: 8px 12px;
+  width: 220px;
+  background: #111;
+  border: 1px solid #C0AEA3;
+  color: #eee;
+  font-family: Cinzel, serif;
+}
+
+.merch-search input::placeholder {
+  color: #888;
+}
