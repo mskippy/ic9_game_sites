@@ -1,58 +1,141 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Your Cart</title>
-    <style>
-        body { font-family: Arial; padding: 20px; }
-        .item { padding: 12px; border-bottom: 1px solid #ccc; }
-        button {
-            padding: 10px 16px;
-            background: black;
-            color: white;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-            margin-top: 20px;
-        }
-    </style>
+<meta charset="UTF-8">
+<title>Your Cart</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: white;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.cart-container {
+    max-width: 900px;
+    margin: auto;
+}
+
+.cart-item {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    background: #1e293b;
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.cart-item img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.cart-info {
+    flex: 1;
+}
+
+.cart-info h3 {
+    margin: 0;
+}
+
+.cart-price {
+    font-size: 18px;
+    color: #00ffcc;
+    font-weight: bold;
+}
+
+.remove-btn {
+    background: red;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+}
+
+.total {
+    text-align: right;
+    font-size: 22px;
+    margin-top: 30px;
+    color: #00ffcc;
+}
+
+.empty {
+    text-align: center;
+    font-size: 20px;
+    opacity: 0.7;
+}
+</style>
 </head>
 
 <body>
 
-<h1>Your Cart</h1>
-<div id="cartItems"></div>
+<h1>Your Shopping Cart</h1>
 
-<button onclick="clearCart()">Clear Cart</button>
+<div class="cart-container" id="cartContainer"></div>
+
+<div class="total" id="totalPrice"></div>
 
 <script>
 function getCart() {
     return JSON.parse(localStorage.getItem("cart") || "[]");
 }
+
 function saveCart(cart) {
     localStorage.setItem("cart", JSON.stringify(cart));
 }
 
-function loadCart() {
+function removeItem(index) {
     const cart = getCart();
-    const itemsDiv = document.getElementById("cartItems");
+    cart.splice(index, 1);
+    saveCart(cart);
+    renderCart();
+}
+
+function renderCart() {
+    const cart = getCart();
+    const container = document.getElementById("cartContainer");
+    const totalEl = document.getElementById("totalPrice");
+
+    container.innerHTML = "";
 
     if (cart.length === 0) {
-        itemsDiv.innerHTML = "<p>Your cart is empty.</p>";
+        container.innerHTML = `<p class="empty">Your cart is empty</p>`;
+        totalEl.innerHTML = "";
         return;
     }
 
-    itemsDiv.innerHTML = cart.map((item, i) =>
-        `<div class="item">${i+1}. ${item.name}</div>`
-    ).join("");
+    let total = 0;
+
+    cart.forEach((item, index) => {
+        total += item.price;
+
+        container.innerHTML += `
+            <div class="cart-item">
+                <img src="${item.image}">
+                <div class="cart-info">
+                    <h3>${item.name}</h3>
+                    <div class="cart-price">$${item.price.toFixed(2)}</div>
+                </div>
+                <button class="remove-btn" onclick="removeItem(${index})">Remove</button>
+            </div>
+        `;
+    });
+
+    totalEl.innerHTML = `Total: $${total.toFixed(2)}`;
 }
 
-function clearCart() {
-    localStorage.removeItem("cart");
-    loadCart();
-}
-
-loadCart();
+renderCart();
 </script>
 
 </body>
