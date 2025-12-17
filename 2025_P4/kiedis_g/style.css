@@ -1,0 +1,140 @@
+/* =============================
+   BASIC STYLE GUIDE SETTINGS
+   Students: update this section
+   with YOUR style guide colours and fonts.
+   ============================= */
+
+/* Example:
+   --primary-color: #1E90FF;
+   --secondary-color: #FFC107;
+   --background-color: #0B1020;
+   --text-color: #FFFFFF;
+   --accent-color: #FF4B5C;
+*/
+
+:root {
+  /* TODO: Replace these with your style guide colours (hex codes) */
+  --primary-color: #ffffff;
+  --secondary-color: #ffff;
+  --background-color: #000000;
+  --text-color: #222222;
+  --accent-color: #ffff;
+
+  /* TODO: Replace this with your chosen font from your style guide */
+  --heading-font: 'Arial', sans-serif;
+  --body-font: 'Verdana', sans-serif;
+}
+
+/* =============================
+   GLOBAL STYLES
+   ============================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--body-font);
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.site-header {
+  background-color: var(--primary-color);
+  color: rgb(0, 0, 0);
+  padding-bottom: 10px;
+}
+
+.banner {
+  width: 100%;
+  overflow: hidden;
+}
+
+.banner-image {
+  width: 100%;
+  display: block;
+}
+
+.small-banner .banner-image {
+  max-height: 200px;
+  object-fit: cover;
+}
+
+.site-title {
+  margin: 10px 20px;
+  font-family: var(--heading-font);
+}
+
+/* Navigation */
+.site-nav {
+  margin: 0 20px 10px 20px;
+}
+
+.site-nav a {
+  margin-right: 15px;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.site-nav a:hover {
+  text-decoration: underline;
+}
+
+/* Main content */
+.content {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 0 20px 40px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.content h2 {
+  font-family: var(--heading-font);
+}
+
+/* Images */
+.screenshot {
+  max-width: 100%;
+  border-radius: 4px;
+  border: 2px solid var(--secondary-color);
+}
+
+.placeholder {
+  opacity: 0.8;
+}
+
+/* Trailer video */
+.trailer-video {
+  width: 100%;
+  max-width: 720px;
+  border-radius: 4px;
+  border: 2px solid var(--secondary-color);
+}
+
+/* Play button */
+.play-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--accent-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.play-button:hover {
+  background-color: var(--secondary-color);
+  color: #222222;
+}
+
+/* Footer */
+.site-footer {
+  text-align: center;
+  padding: 10px 0 20px;
+  font-size: 0.9rem;
+  color: #555555;
+}

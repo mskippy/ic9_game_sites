@@ -1,0 +1,212 @@
+/* --- Fonts (correct import for Google Fonts) --- */
+/* Option A: keep this @import (must be the very first thing in the CSS) */
+@import url('https://fonts.googleapis.com/css2?family=Reggae+One&family=Inter:wght@400;600&display=swap');
+
+/* Theme Variables */
+:root{
+  --forest: #265911;
+  --coral: #F88282;
+  --turquoise: #529fa7;
+  --violet: #8370C3;
+  --periwinkle: #7CABFF;
+  --slate: #889DBD;
+  --midnight: #1D1E30;
+  --charcoal: #282929;
+}
+
+/* Base */
+*{box-sizing: border-box;}
+html,body{height:100%;}
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--midnight); 
+  color: var(--slate);
+  font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  text-align: center;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* Header + Nav */
+header {
+  background: var(--midnightl);
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+nav{
+  display:flex;
+  justify-content:center;
+  gap: 28px;
+  align-items:center;
+}
+nav a {
+  margin: 0 8px;
+  text-decoration: none;
+  color: var(--turquoise);
+  font-weight: 600;
+  font-size: 1.15rem;
+}
+nav a:hover { color: var(--coral); }
+
+/* Page Layout */
+.main {
+  max-width: 1000px;
+  margin: 32px auto;
+  padding: 40px 20px;
+}
+
+/* Titles */
+h1, h2 {
+  font-family: 'Reggae One', 'Reggay One', sans-serif; /* corrected fallback */
+  color: var(--turquoise);
+  margin: 8px 0 18px;
+}
+
+/* Footer */
+footer {
+  margin-top: 50px;
+  opacity: 0.8;
+  font-size: 0.85rem;
+}
+
+/* Pixel Art Scaling */
+.pixel {
+  image-rendering: pixelated;
+  width: 140px;
+  height: auto;
+  display: block;
+  margin: 8px auto;
+}
+
+/* small responsive nicety */
+@media (max-width:600px){
+  nav a{font-size:1rem;}
+  .pixel{width:100px;}
+}
+/* CAVE BORDER WRAPPER */
+body {
+  margin: 0;
+  background-color: #1D1E30; /* center color */
+  font-family: 'Inter', sans-serif;
+  color: var(--slate);
+  text-align: center;
+
+  position: relative;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ---- TOP BORDER ---- */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 180px; /* adjust if needed */
+  background-image: url("assets/Plan 1.png");
+  background-repeat: repeat-x;
+  background-size: contain;
+  image-rendering: pixelated;
+  pointer-events: none;
+  z-index: 5;
+}
+
+/* ---- BOTTOM BORDER ---- */
+body::after {
+  content: "";
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 180px;
+  background-image: url("assets/Bottom.png");
+  background-repeat: repeat-x;
+  background-size: contain;
+  image-rendering: pixelated;
+  pointer-events: none;
+  z-index: 5;
+}
+
+/* ---- LEFT BORDER ---- */
+#left-border {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 180px;
+  background-image: url("assets/Left side.png");
+  background-repeat: repeat-y;
+  background-size: contain;
+  image-rendering: pixelated;
+  pointer-events: none;
+  z-index: 5;
+}
+
+/* ---- RIGHT BORDER ---- */
+#right-border {
+  content: "";
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 180px;
+  background-image: url("assets/Right side.png");
+  background-repeat: repeat-y;
+  background-size: contain;
+  image-rendering: pixelated;
+  pointer-events: none;
+  z-index: 5;
+}
+
+/* Ensure site content stays centered between borders */
+.main {
+  position: relative;
+  z-index: 10;
+  max-width: 900px;
+  margin: auto;
+  padding: 40px 20px;
+}
+h2 {font-size:2rem;}
+.creature-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  max-width: 900px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.creature img {
+  display: block;
+  margin: 0 auto;
+}
+
+.creature-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  margin: 40px auto;
+  max-width: 900px;
+  text-align: center;
+}
+
+.creature img {
+  display: block;
+  margin: 0 auto;
+}
+
+.creature p {
+  margin-top: 8px;
+  color: var(--slate);
+}
+.rainy {
+  width: 500px; 
+  height: auto;
+}
+
