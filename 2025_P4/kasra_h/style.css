@@ -27,7 +27,7 @@ body {
     color: var(--bone);
     font-family: "Cinzel", serif;
     background-color: var(--darkblue);
-    background-image: url("images/Untitled (Youtube Banner).svg"); /* soft grunge texture */
+    background-image: url("images/banner.svg"); /* soft grunge texture */
     background-size: cover;
     background-attachment: fixed;
 }
@@ -59,7 +59,7 @@ nav a:hover {
 
 /* ===== HEADER / BANNER ===== */
 .header-banner {
-    background: url("Untitled (Youtube Banner).png") no-repeat center/cover;
+    background: url("images/banner.svg") no-repeat center/cover;
     height: 450px;
     position: relative;
     width: 100%;
@@ -76,7 +76,7 @@ header h1 {
 
 header p {
     font-size: 1.4rem;
-    margin-top: 10px;
+    margin-top: 10  px;
     color: var(--black);
     text-shadow: 1px 1px var(--bone);
 }
@@ -85,7 +85,7 @@ header p {
 .content {
     max-width: 1050px;
     margin: auto;
-    padding: 40px 25px;
+    padding: 430px 25px;
 }
 
 .panel {
