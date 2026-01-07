@@ -1,10 +1,63 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>ICT 9 Game Sites</title>
+    <title>Homeland Defense Simulator</title>
+    <link rel="stylesheet" href="index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
 <body>
-  <h1>ICT 9 Game Websites</h1>
-  <p>This is the placeholder index page. Student sites will appear here later.</p>
+    <img src="assets/HomelandDefenseBanner.png" style="display: block;">
+    <div class="TopMenu">
+        <div style="width: 1912px; height: 20px; background-color: black;"></div>
+        <div class="menu">
+            <button onclick="location.href=''" class="Home"><span class="buttontext">Home</span></button>
+            <button onclick="location.href='Gallery'" class="Gallery"><span class="buttontext">Gallery</span></button>
+            <button onclick="location.href='Credits'" class="Credits"><span class="buttontext">Credits</span></button>
+            <button onclick="location.href='Howtoplay'" class="Howtoplay"><span class="buttontext">How to play</span></button>
+        </div>
+    </div>
+    <div style="margin: 10px;">
+        <flex style="flex-direction: column; max-width: fit-content; margin-left: auto; margin-right: auto;">
+            <h1>Welcome!</h1>
+            <section>
+                <h2>About the game</h2>
+                <p style="max-width: 759px;">
+                    Homeland Defense Simulator is a <span style="color: #78ff88;">tower defense game</span> made with GDevelop,
+                    assets made with Piskel and existing assets fetched from Kenney. <a href="Credits" style="text-decoration: none;">(See credits here)</a>
+                    The game has three maps with differing difficulties, Grasslands being the easiest and
+                    Sky being the hardest.
+                </p>
+            </section>
+            <section>
+                <h2>Wave progression</h2>
+                <p style="max-width: 759px;">
+                    Wave progression system works simply killing all of the enemies and not
+                    letting your castle that you are defending die. Each wave passing gains you
+                    money depending on your castle's health. Also as you get far from the waves,
+                    enemy mutation will occur, either having heighten speed or stronger health.
+                    Boss would spawn at the last wave and its difficulty in killing it depends
+                    on what map. 
+                </p>
+            </section>
+            <section>
+                <h2>
+                    
+                </h2>
+            </section>
+            <section>
+                <h2>Trailer</h2>
+                <video controls style="margin-left: 50px; width: 1000px;">
+                    <source src="assets/game_trailer.mp4">
+                </video>
+            </section>
+        </flex>
+    </div>
+    <footer style="margin-left: auto; margin-right: auto; width: 500px;">
+        <p style="text-align: center; font-size: 15px; margin-bottom: 0px;">Made by Vincent Pangan<br>&copy 2025 Homeland Defense SImulator</p>
+    </footer>
 </body>
+
 </html>

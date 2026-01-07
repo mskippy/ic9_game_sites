@@ -1,0 +1,32 @@
+@import url('../main.css');
+@import url('../assets/fonts/fontlib.css');
+
+/* Style */
+
+h1, h2 {
+    color: #fff;
+}
+
+p a, p {
+    color: #fff;
+}
+
+p {
+    margin-top: 0px;
+    margin-left: 15px;
+    font-size: 25px;
+}
+
+p a {
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 70px;
+    margin: 10px;
+}
+
+h2 {
+    font-size: 45px;
+    margin: 10px
+}

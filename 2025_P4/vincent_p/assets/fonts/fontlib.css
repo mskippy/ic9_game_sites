@@ -1,0 +1,21 @@
+@font-face {
+    font-family: 'Fredoka One';
+    font-style: normal;
+    font-weight: 500;
+    src: url('Fredoka-One.ttf');
+}
+
+@font-face {
+    font-family: 'Kenney Future';
+    src: url('Kenney-Future.ttf');
+}
+
+@font-face {
+    font-family: 'Kenney Future Narrow';
+    src: url('Kenney-Future-Narrow.ttf');
+}
+
+@font-face {
+    font-family: 'Kenney Future Thin';
+    src: url('Kenney-Future-Thin.ttf');
+}

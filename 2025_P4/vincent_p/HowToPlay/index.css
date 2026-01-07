@@ -1,0 +1,24 @@
+@import url('../main.css');
+@import url('../assets/fonts/fontlib.css');
+
+/* Style */
+
+body {
+    background-color: #78ff88;
+}
+
+h1 {
+    font-size: 70px;
+    margin: 10px;
+}
+
+h2 {
+    font-size: 45px;
+    margin: 10px;
+    margin-left: 25px;
+}
+
+p {
+    font-size: 20px;
+    margin-left: 50px;
+}

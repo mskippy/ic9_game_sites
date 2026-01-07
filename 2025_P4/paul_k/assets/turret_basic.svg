@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42 55">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #727272;
+      }
+
+      .cls-2 {
+        fill: #9f9f9f;
+      }
+
+      .cls-3 {
+        fill: #2bbf6a;
+      }
+
+      .cls-4 {
+        fill: #939393;
+      }
+
+      .cls-5 {
+        fill: #219853;
+      }
+
+      .cls-6 {
+        fill: #2ecc71;
+      }
+
+      .cls-7 {
+        fill: #adadad;
+      }
+    </style>
+  </defs>
+  <g id="svg1571">
+    <g id="g63">
+      <g id="use1525">
+        <g id="Layer0_262_FILL">
+          <path id="path1115" class="cls-3" d="M21,53h11l8-8-19,8M10,53h11L2,45l8,8M40,32v-4h-4l4,4M6,28H2v4l4-4Z"/>
+          <path id="path1116" class="cls-4" d="M8,24v4h26v-4H8Z"/>
+          <path id="path1117" class="cls-5" d="M6,28v-2H2c-.57,0-1.03.2-1.4.6-.4.37-.6.83-.6,1.4v17c0,.57.2,1.05.6,1.45l8,8c.37.37.83.55,1.4.55h22c.57,0,1.05-.18,1.45-.55l8-8c.37-.4.55-.88.55-1.45v-17c0-.57-.18-1.03-.55-1.4-.4-.4-.88-.6-1.45-.6h-4v2h4v17l-8,8H10l-8-8v-17h4Z"/>
+          <path id="path1118" class="cls-6" d="M8,28h-2l-4,4v13l19,8,19-8v-13l-4-4H8Z"/>
+          <path id="path1119" class="cls-2" d="M18.5,2h-2.5v22h2.5V2M26,2h-2.5v22h2.5V2Z"/>
+          <path id="path1120" class="cls-7" d="M23.5,2h-5v22h5V2Z"/>
+          <path id="path1121" class="cls-1" d="M18.5,2h7.5v22h8v4h2v-4c0-.57-.18-1.03-.55-1.4-.4-.4-.88-.6-1.45-.6h-6V2c0-.57-.18-1.03-.55-1.4-.4-.4-.88-.6-1.45-.6h-10c-.57,0-1.03.2-1.4.6-.4.37-.6.83-.6,1.4v20h-6c-.57,0-1.03.2-1.4.6-.4.37-.6.83-.6,1.4v4h2v-4h8V2h2.5Z"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

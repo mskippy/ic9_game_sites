@@ -1,0 +1,86 @@
+@import url('assets/fonts/fontlib.css');
+/* Main */
+
+html {
+    background-color: white;
+    font-family: 'Fredoka One';
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+}
+
+/* Button Style DO NOT TOUCH OR IT WILL GO MAYHEM*/
+
+div.TopMenu {
+    position: sticky;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+}
+div.menu {
+    display: flex;
+    flex-direction: row;
+    height: 60px;
+    width: 1912px;
+}
+
+button {
+    border: 7px solid;
+    font-family: 'Fredoka One';
+    color: #fff;
+    height: 50px;
+    align-self: flex-start;
+    transition: 0.15s;
+}
+
+button.Home {
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+    border-top: 0px;
+    border-radius: 0px 0px 10px 0px;
+    border-color: #000;
+    display: flex;
+}
+
+button.Credits {
+    border-top: 0px;
+    background-color: rgb(99, 99, 99);
+    border-color: rgb(185, 185, 185);
+    border-radius: 0 0 10px 10px;
+    display: flex;
+}
+
+button.Howtoplay {
+    border-top: 0px;
+    background-color: #78ff88;
+    border-color: #bf8953;
+    border-radius: 0 0 10px 10px;
+    display: flex;
+}
+
+button.Gallery {
+    border-top: 0px;
+    background-color: #909090;
+    border-color: #f00;
+    border-radius: 0 0 10px 10px;
+    display: flex;
+}
+
+button:hover {
+    height: 60px;
+}
+
+button span.buttontext {
+    padding: 5px;
+    font-size: 25px;
+    align-self: flex-end;
+    font-family: 'Kenney Future';
+}
+
+/* Flexbox */
+
+flex {
+    display: flex;
+}

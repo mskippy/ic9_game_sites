@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Lava Jump</title>
+<link rel="stylesheet" href="style.css" />
+<body>
+<header class="hero">
+<h1 class="title">LAVA JUMP</h1>
+<p class="tagline">The volcano's awake… and it wants YOU!</p>
+<button class="play-btn" onclick="playVideo()">Play Trailer</button>
+<video id="gameVideo" width="100%" controls style="display:none;">
+  <source src="TRAILER lava jump.mp4" type="video/mp4">
+  Your browser does not support the video tag.</video>
+</header>
+<section class="section">
+     <div class="Characters-grid"></div>
+      <img src="images\banner.png" alt="Game Screenshot 4" width="" height="235">
+      <section class="section">
+<nav class="navbar">
+  <div class="logo">LAVA JUMP</div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="characters.html">Characters</a></li>
+    <li><a href="how to play.html">How to Play</a></li>
+    <li><a href="about.html">About</a></li>
+
+<script>function playVideo() {
+    const video = document.getElementById("gameVideo");
+    video.style.display = "block";
+    video.play();
+  }</script>
