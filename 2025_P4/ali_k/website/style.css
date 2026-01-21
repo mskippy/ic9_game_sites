@@ -1,0 +1,71 @@
+/* Comic Book Style Guide Inspired by Your Design */
+
+/* COLOURS USED:
+   Hero Red: #ff5722
+   Hero Blue: #0091ea
+   Black: #000000
+   White: #ffffff
+   Additional villain colours kept for future use */
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: #0091ea; /* Comic blue background */
+    color: #000000;
+}
+
+header {
+    background: #ff5722;
+    padding: 25px;
+    text-align: center;
+    color: #ffffff;
+    border-bottom: 5px solid #000000; /* Thick comic outline */
+}
+
+.title {
+    font-size: 48px;
+    font-weight: bold;
+    text-shadow: 4px 4px #000000; /* Comic-style chunky shadow */
+}
+
+nav a {
+    margin: 0 15px;
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 6px 10px;
+    border: 3px solid #000000;
+    background: #ff5722;
+    border-radius: 6px;
+    transition: 0.2s;
+}
+
+nav a:hover {
+    background: #ffffff;
+    color: #000000;
+}
+
+.hero, .content {
+    background: #ffffff;
+    margin: 25px;
+    padding: 25px;
+    border-radius: 12px;
+    border: 5px solid #000000;
+    box-shadow: 0 0 15px rgba(0,0,0,0.4);
+}
+
+h2 {
+    font-size: 32px;
+    text-shadow: 2px 2px #000000;
+}
+
+p, li {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
