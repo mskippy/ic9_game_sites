@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The Castle – Official Trailer</title>
+
+<!-- Pixel / Horror Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Creepster&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --blood-red: #b00000;
+  --dark-red: #5a0000;
+  --black: #000000;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(circle at top, #150000, #000000 70%);
+  color: #e5e5e5;
+  font-family: 'Press Start 2P', monospace;
+}
+
+/* BLOOD DRIP EFFECT */
+.blood-drip {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background: linear-gradient(to bottom, var(--blood-red), transparent);
+  z-index: 999;
+}
+
+/* HEADER */
+header {
+  text-align: center;
+  padding: 80px 20px 40px;
+}
+
+header h1 {
+  font-family: 'Creepster', cursive;
+  font-size: 4rem;
+  color: var(--blood-red);
+  text-shadow: 0 0 15px #ff0000, 0 0 40px #500000;
+  margin-bottom: 20px;
+}
+
+header p {
+  color: #aaa;
+  max-width: 700px;
+  margin: auto;
+  font-size: 0.8rem;
+  line-height: 1.8;
+}
+
+/* TRAILER SECTION */
+.trailer-section {
+  display: flex;
+  justify-content: center;
+  padding: 60px 20px;
+}
+
+.trailer-frame {
+  width: 90%;
+  max-width: 960px;
+  aspect-ratio: 16 / 9;
+  background: #000;
+  border: 6px solid var(--blood-red);
+  box-shadow: 0 0 40px #700000;
+  position: relative;
+}
+
+.trailer-frame::before {
+  content: 'WATCH IF YOU DARE';
+  position: absolute;
+  top: -32px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: black;
+  color: var(--blood-red);
+  padding: 6px 14px;
+  font-size: 0.6rem;
+  border: 2px solid var(--blood-red);
+}
+
+.trailer-frame video {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* STORY TEXT */
+.story {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 30px;
+  border: 4px solid var(--dark-red);
+  background: rgba(20, 0, 0, 0.6);
+  box-shadow: inset 0 0 25px #300000;
+}
+
+.story h2 {
+  font-family: 'Creepster', cursive;
+  color: var(--blood-red);
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.story p {
+  font-size: 0.7rem;
+  line-height: 2;
+  color: #ddd;
+}
+
+/* BUTTONS */
+.buttons {
+  text-align: center;
+  margin: 60px 0;
+}
+
+.buttons a {
+  display: inline-block;
+  margin: 15px;
+  padding: 18px 26px;
+  color: var(--blood-red);
+  border: 3px solid var(--blood-red);
+  text-decoration: none;
+  font-size: 0.7rem;
+  background: black;
+  box-shadow: 0 0 20px #500000;
+  transition: all 0.3s ease;
+}
+
+.buttons a:hover {
+  background: var(--blood-red);
+  color: black;
+  box-shadow: 0 0 35px #ff0000;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 40px 20px;
+  border-top: 2px solid #300000;
+  color: #666;
+  font-size: 0.6rem;
+}
+
+/* FLICKER EFFECT */
+@keyframes flicker {
+  0% { opacity: 1; }
+  50% { opacity: 0.85; }
+  100% { opacity: 1; }
+}
+
+header h1 {
+  animation: flicker 2.5s infinite;
+}
+</style>
+</head>
+<body>
+
+<div class="blood-drip"></div>
+
+<header>
+  <h1>THE CASTLE</h1>
+  <p>
+    The gates open once more. What you are about to witness is only a fragment of the horror
+    that waits inside the cursed stone walls.
+  </p>
+</header>
+
+<section class="trailer-section">
+  <div class="trailer-frame">
+    <!-- Replace trailer.mp4 with your actual trailer file -->
+    <video controls poster="poster-placeholder.jpg">
+      <source src="https://customer-5bn4yvuguu8qv7e1.cloudflarestream.com/f3bb2779cb27bd67fdb27e3fb792b816/watch" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</section>
+
+<section class="story"></section>
+
+
+
+<footer>
+  © 2025 The Castle • A Pixel Horror Experience
+</footer>
+
+</body>
+</html>
+<a href="spooky_castle_website.html" 
+   style="color:red; font-family:'Press Start 2P'; font-size:20px; text-decoration:none;">
+   ◄ BACK TO HOME
+</a>
