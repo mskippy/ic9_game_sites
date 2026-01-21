@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <img src="images/banner.png" alt="Jewel Runner Banner" style="width: 100%; max-width: 1920px;">
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="how_to_play.html">How to Play</a>
+        <a href="https://gd.games/games/ee775160-9a27-4857-9148-dfd9ba0b4290" target="_blank">Play Now</a>
+    </nav>
+    <div class="content">
+        <h1>Gallery</h1>
+        <h2>Screenshots</h2>
+        <div class="gallery-grid">
+            <img src="images/Screenshots/Screenshot1.png" alt="Screenshot 1">
+            <img src="images/Screenshots/Screenshot2.png" alt="Screenshot 2">
+            <img src="images/Screenshots/Screenshot3.png" alt="Screenshot 3">
+            <img src="images/Screenshots/Screenshot4.png" alt="Screenshot 4">
+            <img src="images/Screenshots/Screenshot5.png" alt="Screenshot 5">
+            <img src="images/Screenshots/Screenshot6.png" alt="Screenshot 6">
+            <img src="images/Screenshots/Screenshot7.png" alt="Screenshot 7">
+            <img src="images/Screenshots/Screenshot8.png" alt="Screenshot 8">
+            <img src="images/Screenshots/Screenshot9.png" alt="Screenshot 9">
+            <img src="images/Screenshots/Screenshot10.png" alt="Screenshot 10">
+            <img src="images/Screenshots/Screenshot11.png" alt="Screenshot 11">
+            <img src="images/Screenshots/Screenshot12.png" alt="Screenshot 12">
+            <img src="images/Screenshots/Screenshot13.png" alt="Screenshot 13">
+            <img src="images/Screenshots/Screenshot14.png" alt="Screenshot 14">
+            <img src="images/Screenshots/Screenshot15.png" alt="Screenshot 15">
+            <img src="images/Screenshots/Screenshot16.png" alt="Screenshot 16">
+            <img src="images/Screenshots/Screenshot17.png" alt="Screenshot 17">
+        </div>
+        <section id="poster">
+            <h2>Poster</h2>
+            <img src="images/poster.png" alt="Game Poster" style="width: 100%; max-width: 600px; display: block; margin: 0 auto;">
+        </section>
+        <section id="banner">
+            <h2>Banner</h2>
+            <img src="images/banner.png" alt="Jewel Runner Banner" style="width: 100%; max-width: 1920px;">
+        </section>
+        <section id="icon">
+            <h2>Icon</h2>
+            <img src="images/game_icon.png" alt="Jewel Runner Icon" style="width: 100%; max-width: 300px; display: block; margin: 0 auto;">
+        </section>
+    </div>
+    <div id="modal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modal-img">
+    </div>
+    <script>
+        const modal = document.getElementById('modal');
+        const modalImg = document.getElementById('modal-img');
+        const closeBtn = document.getElementsByClassName('close')[0];
+        const images = document.querySelectorAll('.gallery-grid img');
+
+        images.forEach(img => {
+            img.addEventListener('click', function() {
+                modal.style.display = 'block';
+                modalImg.src = this.src;
+            });
+        });
+
+        closeBtn.addEventListener('click', function() {
+            modal.style.display = 'none';
+        });
+
+        modal.addEventListener('click', function(event) {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    </script>
+    <footer>Lukey Games Studios</footer>
+</body>
+</html>

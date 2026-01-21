@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Play</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <img src="images/banner.png" alt="Jewel Runner Banner" style="width: 100%; max-width: 1920px;">
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="how_to_play.html">How to Play</a>
+        <a href="https://gd.games/games/ee775160-9a27-4857-9148-dfd9ba0b4290" target="_blank">Play Now</a>
+    </nav>
+    <div class="content">
+        <h1>How to Play</h1>
+        <section id="controls">
+            <h2>Controls</h2>
+            <p>Use <kbd>&larr;</kbd> <kbd>&rarr;</kbd> <kbd>&uarr;</kbd> <kbd>&darr;</kbd> to move your character. Press <kbd>Space</kbd> to jump.</p>
+        </section>
+        <section id="goal">
+            <h2>Goal</h2>
+            <p>You play as a spaceman. <br><img id="idle-spaceman" src="images/sprites/idle1.png" alt="Idle Spaceman"></p>
+            <p>Collect all the jewels while avoiding obstacles to reach the end of the level. <br><img id="jewel" src="images/sprites/yellowJewel.png" alt="Jewel"></p>
+            <p>Watch out for the Enemies. <br><img id="enemy" src="images/sprites/enemy1.png" alt="Enemy"></p>
+            <p>Avoid the Traps.</p>
+            <div class="traps">
+                <div class="trap-item"><img id="saw" src="images/sprites/saw1.png" alt="Saw"> Saw Blade</div>
+                <div class="trap-item"><img id="fan" src="images/sprites/fan1.png" alt="Fan"> Fan</div>
+                <div class="trap-item"><img id="fire" src="images/sprites/fire1.png" alt="Fire"> Fire</div>
+                <div class="trap-item"><img id="spike" src="images/sprites/spike1.png" alt="Spike"> Spikes</div>
+            </div>
+        </section>
+        <section id="tips">
+            <h2>Tips</h2>
+            <ul>
+                <li>Time your jumps carefully.</li>
+                <li>Look for hidden paths.</li>
+                <li>Try not to run out of lives.</li>
+            </ul>
+        </section>
+        <section id="credits">
+            <h2>Credits</h2>
+            <p>Game developed by Luke Sheerin at Lukey Games Studios. Special thanks to my Dad for giving me help along the way.</p>
+        </section>
+    </div>
+    <footer>Lukey Games Studios</footer>
+    <script>
+        const idleImages = ['Idle1.png', 'Idle2.png', 'Idle3.png', 'Idle4.png', 'Idle5.png', 'Idle6.png', 'Idle7.png', 'Idle8.png', 'Idle9.png', 'Idle10.png', 'Idle11.png'];
+        let currentIdleIndex = 0;
+        const idleImg = document.getElementById('idle-spaceman');
+        setInterval(() => {
+            currentIdleIndex = (currentIdleIndex + 1) % idleImages.length;
+            idleImg.src = `images/sprites/${idleImages[currentIdleIndex]}`;
+        }, 80);
+    </script>
+    <script>
+        const enemyImages = ['enemy1.png', 'enemy2.png'];
+        let currentEnemyIndex = 0;
+        const enemyImg = document.getElementById('enemy');
+        setInterval(() => {
+            currentEnemyIndex = (currentEnemyIndex + 1) % enemyImages.length;
+            enemyImg.src = `images/sprites/${enemyImages[currentEnemyIndex]}`;
+        }, 250);
+    </script>
+    <script>
+        const sawImages = ['saw1.png', 'saw2.png', 'saw3.png', 'saw4.png', 'saw5.png', 'saw6.png', 'saw7.png', 'saw8.png'];
+        let currentSawIndex = 0;
+        const sawImg = document.getElementById('saw');
+        setInterval(() => {
+            currentSawIndex = (currentSawIndex + 1) % sawImages.length;
+            sawImg.src = `images/sprites/${sawImages[currentSawIndex]}`;
+        }, 80);
+    </script>
+    <script>
+        const fanImages = ['fan1.png', 'fan2.png', 'fan3.png', 'fan4.png'];
+        let currentFanIndex = 0;
+        const fanImg = document.getElementById('fan');
+        setInterval(() => {
+            currentFanIndex = (currentFanIndex + 1) % fanImages.length;
+            fanImg.src = `images/sprites/${fanImages[currentFanIndex]}`;
+        }, 80);
+    </script>
+    <script>
+        const fireImages = ['fire1.png', 'fire2.png', 'fire3.png'];
+        let currentFireIndex = 0;
+        const fireImg = document.getElementById('fire');
+        setInterval(() => {
+            currentFireIndex = (currentFireIndex + 1) % fireImages.length;
+            fireImg.src = `images/sprites/${fireImages[currentFireIndex]}`;
+        }, 80);
+    </script>
+    <script>
+        const spikeImages = ['spike1.png', 'spike2.png', 'spike3.png'];
+        let currentSpikeIndex = 0;
+        const spikeImg = document.getElementById('spike');
+        setInterval(() => {
+            currentSpikeIndex = (currentSpikeIndex + 1) % spikeImages.length;
+            spikeImg.src = `images/sprites/${spikeImages[currentSpikeIndex]}`;
+        }, 250);
+    </script>
+</body>
+</html>
